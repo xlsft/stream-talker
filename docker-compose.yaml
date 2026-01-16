@@ -1,0 +1,6 @@
+services:
+  stream-talker:
+    restart: always
+    image: reg.aincc.ru/stream-talker.bullshit.xlsoftware.ru:latest
+    ports:
+      - "4002:3000"
