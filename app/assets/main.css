@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+* {
+    font-family: "Google Sans Code"
+}
+
+@theme {
+    --ui-primary: var(--color-green-500)
+}
