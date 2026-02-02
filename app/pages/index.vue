@@ -79,6 +79,7 @@
 
     const actions = {
         stream: () => location.replace('/?stream=true'),
+        edit: () => location.replace('/'),
         reload: () => location.reload()
     }
 </script>
@@ -196,8 +197,9 @@
                     }"
                 />
             </NuxtFormField>
-            <NuxtTooltip text="Enter a stream mode">
-                <NuxtButton @click="actions.stream" class="bottom-12 left-12 absolute">Stream Mode</NuxtButton>
+            <NuxtTooltip text="Enter a stream mode" >
+                <NuxtButton @click="actions.stream" class="bottom-12 left-12 absolute" v-if="edit">Stream Mode</NuxtButton>
+                <NuxtButton @click="actions.edit" class="bottom-12 left-12 absolute opacity-0 hover:opacity-100" v-else>Edit Mode</NuxtButton>
             </NuxtTooltip>
         </div>
     </div>
